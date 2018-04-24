@@ -7,20 +7,24 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Activity 1"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView"/>
+        />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/convertImageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="open activity 2"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true" />
+        android:text="Convert"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image" />
 
 </RelativeLayout>
