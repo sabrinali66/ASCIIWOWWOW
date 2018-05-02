@@ -1,6 +1,7 @@
 package edu.illinois.cs.cs125.ascii_wow_wow;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -12,6 +13,9 @@ import edu.illinois.cs.cs125.ascii_wow_wow.R;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.app.Activity;
+import android.widget.Toast;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 public class MainActivity extends AppCompatActivity {
     private Button getActivity;
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) { //@Todo
                 if (imageUri != null) {
+                    Toast.makeText(getApplicationContext(), "Tiling your image!",
+                            Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(MainActivity.this, Main2Activity.class);
                     intent.putExtra("imageUri", imageUri.toString());
                     startActivity(intent);

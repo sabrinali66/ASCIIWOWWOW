@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/convertedImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Converted Image"
@@ -16,17 +17,36 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_width="210dp"
+        android:layout_height="305dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
-    <Button
-        android:id="@+id/copy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Copy"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_width="210dp"
+        android:layout_height="305dp"
+        android:layout_toRightOf="@+id/imageView2"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_width="210dp"
+        android:layout_height="305dp"
+        android:layout_below="@+id/imageView2"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_width="210dp"
+        android:layout_height="305dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_toRightOf="@id/imageView4"/>
 
 </RelativeLayout>
