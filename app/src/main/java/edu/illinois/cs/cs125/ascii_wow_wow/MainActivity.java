@@ -28,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
         Button getActivity = (Button) findViewById(R.id.convertImageButton);
         getActivity.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+            public void onClick(View v) { //@Todo
+                if (imageUri != null) {
+                    Intent intent=new Intent(MainActivity.this, Main2Activity.class);
+                    intent.putExtra("imageUri", imageUri.toString());
+                    startActivity(intent);
+                }
             }
         });
 
