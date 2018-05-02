@@ -19,8 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_centerVertical="true" />
 
+    <Button
+        android:id="@+id/copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
