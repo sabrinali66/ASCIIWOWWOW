@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Main2Activity extends AppCompatActivity {
     Uri myUri;
 
-    private static  String BLACK = "@";
+    /**private static  String BLACK = "@";
     private static String CHARCOAL = "#";
     private static String DARKGRAY = "8";
     private static String MEDIUMGRAY = "&";
@@ -24,29 +24,33 @@ public class Main2Activity extends AppCompatActivity {
     private static String SLATEGRAY = "*";
     private static  String LIGHTGRAY = ".";
     private static String WHITE = " ";
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        ImageView iv_photo=(ImageView)findViewById(R.id.imageView2);
-        /**ImageView iv_photo2=(ImageView)findViewById(R.id.imageView3);
+        ImageView iv_photo = (ImageView) findViewById(R.id.imageView2);
+        ImageView iv_photo2 = (ImageView) findViewById(R.id.imageView3);
 
-        ImageView iv_photo3=(ImageView)findViewById(R.id.imageView4);
-        ImageView iv_photo4=(ImageView)findViewById(R.id.imageView5);
-         */
+        ImageView iv_photo3 = (ImageView) findViewById(R.id.imageView4);
+        ImageView iv_photo4 = (ImageView) findViewById(R.id.imageView5);
+
         Bundle extras = getIntent().getExtras();
         String temp = extras.getString("imageUri");
-        if(temp!=null){
+        if (temp != null) {
             myUri = Uri.parse(temp);
-            /**iv_photo.setImageURI(myUri);
+            iv_photo.setImageURI(myUri);
             iv_photo2.setImageURI(myUri);
             iv_photo3.setImageURI(myUri);
             iv_photo4.setImageURI(myUri);
-             **/
+            }
+        }
+    }
 
-            Bitmap bitmap;
+
+            /** Bitmap bitmap;
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), myUri);
             } catch (IOException e) {
@@ -73,8 +77,8 @@ public class Main2Activity extends AppCompatActivity {
             textView.setText(toTextView.toString());
         }
     }
-
-    private static  String getGrayShade(int redValue)
+*/
+    /**private static  String getGrayShade(int redValue)
     {
         String asciival = " ";
 
@@ -118,3 +122,4 @@ public class Main2Activity extends AppCompatActivity {
         return asciival;
     }
 }
+     */
